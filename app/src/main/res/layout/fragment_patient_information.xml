@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/overall_margin"
     android:orientation="vertical"
@@ -22,7 +22,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/overall_margin"
-                android:text="@string/loginInfo" />
+                android:text="@string/loginInfo"
+                android:textSize="@dimen/sp14" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,7 +43,8 @@
                         android:layout_gravity="center_vertical"
                         android:hint="Phone No"
                         android:inputType="phone"
-                        android:maxLength="10" />
+                        android:maxLength="10"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -70,7 +72,8 @@
                         android:layout_gravity="center_vertical"
                         android:hint="Email Id"
                         android:inputType="textEmailAddress"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -98,19 +101,21 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="0dp"
-                    android:layout_marginEnd="@dimen/spacing"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginRight="@dimen/spacing">
+                    android:layout_marginEnd="@dimen/spacing"
+                    android:layout_marginRight="@dimen/spacing"
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/lastName"
                         android:layout_width="match_parent"
+
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:hint="Last Name"
                         android:inputType="textPersonName"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -124,11 +129,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:hint="First Name"
                         android:layout_marginEnd="@dimen/spacing"
+                        android:layout_marginRight="@dimen/spacing"
+
+                        android:hint="First Name"
                         android:inputType="textPersonName"
                         android:maxLines="1"
-                        android:layout_marginRight="@dimen/spacing" />
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -139,12 +146,14 @@
 
                     <EditText
                         android:id="@+id/middleName"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:hint="Middle Name"
                         android:inputType="textPersonName"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -176,11 +185,13 @@
                 <EditText
                     android:id="@+id/dob"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:hint="DOB"
                     android:inputType="text"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
@@ -217,8 +228,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="@dimen/spacing"
+                    android:layout_marginRight="@dimen/spacing"
                     android:layout_weight="1"
-                    android:layout_marginRight="@dimen/spacing">
+
+                    android:textSize="@dimen/sp12">
 
                     <EditText
                         android:id="@+id/address1"
@@ -238,11 +251,13 @@
                     <EditText
                         android:id="@+id/address2"
                         android:layout_width="match_parent"
+
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:hint="@string/line2"
                         android:inputType="text"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -259,34 +274,38 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="@dimen/spacing"
-                    android:layout_weight="1"
-                    android:layout_marginRight="@dimen/spacing">
+                    android:layout_marginRight="@dimen/spacing"
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/city"
                         android:layout_width="match_parent"
+
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:hint="@string/city"
                         android:inputType="text"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/spacing"
-                    android:layout_weight="1"
-                    android:layout_marginRight="@dimen/spacing">
+                    android:layout_marginRight="@dimen/spacing"
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/state"
                         android:layout_width="match_parent"
+
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:hint="@string/state"
                         android:inputType="text"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -301,7 +320,8 @@
                         android:layout_gravity="center_vertical"
                         android:hint="@string/zip_code"
                         android:inputType="number"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
@@ -320,25 +340,27 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="@dimen/spacing"
-                android:layout_weight="1"
-                android:layout_marginRight="@dimen/spacing">
+                android:layout_marginRight="@dimen/spacing"
+                android:layout_weight="1">
 
                 <EditText
                     android:id="@+id/socialSecurityNo"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:hint="@string/social_security_no"
                     android:inputType="text"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/spacing"
-                android:layout_weight="1"
-                android:layout_marginRight="@dimen/spacing">
+                android:layout_marginRight="@dimen/spacing"
+                android:layout_weight="1">
 
                 <EditText
                     android:id="@+id/phoneNo"
@@ -348,7 +370,9 @@
                     android:hint="@string/phone_no"
                     android:inputType="phone"
                     android:maxLength="10"
-                    android:maxLines="1" />
+
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -364,7 +388,9 @@
                     android:layout_gravity="center_vertical"
                     android:hint="@string/occupation"
                     android:inputType="text"
-                    android:maxLines="1" />
+
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
