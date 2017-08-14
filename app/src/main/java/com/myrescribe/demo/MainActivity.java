@@ -11,7 +11,10 @@ import android.support.v7.widget.Toolbar;
 
 import com.myrescribe.demo.fragments.HealthProblemFlowSheet;
 import com.myrescribe.demo.fragments.InCaseofEmergency;
+import com.myrescribe.demo.fragments.InsuranceInformation;
 import com.myrescribe.demo.fragments.PatientInformationFragment;
+import com.myrescribe.demo.fragments.RiskAnalysis;
+import com.myrescribe.demo.fragments.SocialHistory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -43,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new PatientInformationFragment(), "Patient Information");
-        adapter.addFragment(new PatientInformationFragment(), "Insurance Information");
+        adapter.addFragment(new InsuranceInformation(), "Insurance Information");
         adapter.addFragment(new InCaseofEmergency(), "In Case of Emergency");
         adapter.addFragment(new HealthProblemFlowSheet(), "Health Problem Flow Sheet");
-        adapter.addFragment(new PatientInformationFragment(), "Social History");
-        adapter.addFragment(new PatientInformationFragment(), "Risk Analysis");
+        adapter.addFragment(new SocialHistory(), "Social History");
+        adapter.addFragment(new RiskAnalysis(), "Risk Analysis");
 
         viewPager.setAdapter(adapter);
     }

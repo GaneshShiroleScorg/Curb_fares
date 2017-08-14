@@ -4,6 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="personname">Person Name</string>
     <string name="nameofperson">NAME OF PERSON</string>
     <string name="relationship">RELATIONSHIP</string>
@@ -56,4 +57,31 @@
     <string name="title_activity_splash">Splash</string>
     <string name="history_of_cardiac_implantable">HISTORY OF CARDIAC IMPLANTABLE</string>
     <string name="complaints">COMPLAINTS</string>
+
+    <!-- Ritesh Edited text -->>
+    <string name="smoking">smoking</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="packs_per_day">How many packs per day?</string>
+    <string name="how_many_years">Since how many years</string>
+    <string name="have_you_quit">Have you quit</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="occasionally">Occasionally</string>
+    <string name="frequently">Frequently</string>
+    <string name="everyday">Everyday</string>
+    <string name="do_you_drink">Do you drink?</string>
+    <string name="Coffee">Coffee</string>
+    <string name="tea">Tea</string>
+    <string name="cola">Cola</string>
+    <string name="how_much_cups">How much cups/day</string>
+    <string name="ques_one">1. Do you experience any pain in the legs or feet while at rest?</string>
+    <string name="ques_two">2. Do you have uncomfortable aching, fatigue, tingling, cramping or pain in your feet, calves, buttocks, hip or thigh during walking / exercise ? </string>
+    <string name="ques_three"> 3. If Yes to question 2, does the pain go away when you stop walking / exercising? </string>
+    <string name="ques_four"> 4. Do your feet get pale, discolored or bluish at any time during the day? </string>
+    <string name="ques_five"> 5. Do you have an infection, skin wound or ulcer on your leg or foot that is slow to heal over the past 8-12 weeks? </string>
+    <string name="ques_six"> 6. Do you have high cholesterol or other blood lipid (fat) problems or require cholesterol medication? </string>
+    <string name="ques_seven"> 7. Do you have high blood pressure or take medication to reduce blood pressure? </string>
+    <string name="questions">Questions</string>
+    <string name="answer">Answer</string>
+
 </resources>
