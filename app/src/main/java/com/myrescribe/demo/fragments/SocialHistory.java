@@ -2,6 +2,7 @@ package com.myrescribe.demo.fragments;
 
 
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.myrescribe.demo.R;
 
@@ -29,7 +32,13 @@ public class SocialHistory extends Fragment {
     @BindView(R.id.smokingHowManyYears)
     EditText mSmokingHowManyYears;
     String mSmokingOptionSelected = null;
+    @BindView(R.id.smokingPackPerDayTextInputLayout)
+    TextInputLayout mSmokingPackPerDayTextInputLayout;
+    @BindView(R.id.smokingHowManyYearsTextInputLayout)
+    TextInputLayout mSmokingHowManyYearsTextInputLayout;
     //---------
+    @BindView(R.id.haveYouQuitSmoking_HowManyYearsTextInputLayout)
+    TextInputLayout mHaveYouQuitSmoking_HowManyYearsTextInputLayout;
     @BindView(R.id.haveYouQuitLayout)
     LinearLayout mHaveYouQuitLayout;
     @BindView(R.id.haveYouQuitSmoking_HowManyYears)
@@ -37,18 +46,24 @@ public class SocialHistory extends Fragment {
     String mHaveYouQuitOptionSelected = null;
 
     //---
+
+    @BindView(R.id.alcoholSessionOption)
+    RadioGroup mAlcoholSessionOption;
     @BindView(R.id.alcoholLayout)
     LinearLayout mAlcoholLayout;
+    @BindView(R.id.alcoholOptionIfYesView)
+    TextView mAlcoholOptionIfYesView;
     String mAlcoholOptionSelected = null;
     String mAlcoholSessionSelected = null;
 
     //-------------
     @BindView(R.id.doYouDrinkLayout)
     LinearLayout mDoYouDrinkLayout;
+    @BindView(R.id.doYouDrinkLayout_HowMuchPerDayTextInputLayout)
+    TextInputLayout mDoYouDrinkLayout_HowMuchPerDayTextInputLayout;
     String mDoYouDrinkOptionSelected = null;
-
     @BindView(R.id.doYouDrinkLayout_HowMuchPerDay)
-    EditText doYouDrinkLayout_HowMuchCupsPerDay;
+    EditText mDoYouDrinkLayout_HowMuchCupsPerDay;
 
     public SocialHistory() {
         // Required empty public constructor
@@ -69,6 +84,17 @@ public class SocialHistory extends Fragment {
         mHaveYouQuitLayout.setVisibility(View.GONE);
         mAlcoholLayout.setVisibility(View.GONE);
         mDoYouDrinkLayout.setVisibility(View.GONE);
+        //----------
+        mAlcoholSessionOption.setVisibility(View.GONE);
+        mAlcoholOptionIfYesView.setVisibility(View.GONE);
+        //--------
+        mSmokingHowManyYearsTextInputLayout.setVisibility(View.GONE);
+        mSmokingPackPerDayTextInputLayout.setVisibility(View.GONE);
+        //-----
+        mHaveYouQuitSmoking_HowManyYearsTextInputLayout.setVisibility(View.GONE);
+        //--------
+        mDoYouDrinkLayout_HowMuchPerDayTextInputLayout.setVisibility(View.GONE);
+
         mSmokingHowManyYears.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -107,7 +133,7 @@ public class SocialHistory extends Fragment {
                 }
             }
         });
-        doYouDrinkLayout_HowMuchCupsPerDay.addTextChangedListener(new TextWatcher() {
+        mDoYouDrinkLayout_HowMuchCupsPerDay.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -135,10 +161,36 @@ public class SocialHistory extends Fragment {
         boolean checked = radioButton.isChecked();
         if (radioButton.getId() == R.id.smokingOptionYes || radioButton.getId() == R.id.smokingOptionNo) {
             mSmokingOptionSelected = radioButton.getText().toString();
+            //-------------
+            if (getString(R.string.yes).equalsIgnoreCase(mSmokingOptionSelected)) {
+                mSmokingPackPerDayTextInputLayout.setVisibility(View.VISIBLE);
+                mSmokingHowManyYearsTextInputLayout.setVisibility(View.VISIBLE);
+            } else {
+                mHaveYouQuitLayout.setVisibility(View.VISIBLE);
+                mSmokingPackPerDayTextInputLayout.setVisibility(View.GONE);
+                mSmokingHowManyYearsTextInputLayout.setVisibility(View.GONE);
+            }
+            //--------------
         } else if (radioButton.getId() == R.id.haveYouQuitSmokingYes || radioButton.getId() == R.id.haveYouQuitSmokingNo) {
             mHaveYouQuitOptionSelected = radioButton.getText().toString();
+            if (getString(R.string.yes).equalsIgnoreCase(mHaveYouQuitOptionSelected)) {
+                mHaveYouQuitSmoking_HowManyYearsTextInputLayout.setVisibility(View.VISIBLE);
+            } else {
+                mAlcoholLayout.setVisibility(View.VISIBLE);
+                mHaveYouQuitSmoking_HowManyYearsTextInputLayout.setVisibility(View.GONE);
+            }
         } else if (radioButton.getId() == R.id.alcoholYes || radioButton.getId() == R.id.alcoholNo) {
             mAlcoholOptionSelected = radioButton.getText().toString();
+            //-----
+            if (getString(R.string.yes).equalsIgnoreCase(mAlcoholOptionSelected)) {
+                mAlcoholSessionOption.setVisibility(View.VISIBLE);
+                mAlcoholOptionIfYesView.setVisibility(View.VISIBLE);
+            } else {
+                mDoYouDrinkLayout.setVisibility(View.VISIBLE);
+                mAlcoholSessionOption.setVisibility(View.GONE);
+                mAlcoholOptionIfYesView.setVisibility(View.GONE);
+            }
+            //-----
             if (mAlcoholSessionSelected != null && mAlcoholOptionSelected != null) {
                 mDoYouDrinkLayout.setVisibility(View.VISIBLE);
             }
@@ -149,6 +201,7 @@ public class SocialHistory extends Fragment {
             }
         } else if (radioButton.getId() == R.id.doYouDrinkLayoutTea || radioButton.getId() == R.id.doYouDrinkLayoutCoffee || radioButton.getId() == R.id.doYouDrinkLayoutCola) {
             mDoYouDrinkOptionSelected = radioButton.getText().toString();
+            mDoYouDrinkLayout_HowMuchPerDayTextInputLayout.setVisibility(View.VISIBLE);
         }
 
         Log.e("DATA", mSmokingOptionSelected + "|" + mHaveYouQuitOptionSelected + "|" + mAlcoholOptionSelected + "|" + mAlcoholSessionSelected + "|" + mDoYouDrinkOptionSelected);

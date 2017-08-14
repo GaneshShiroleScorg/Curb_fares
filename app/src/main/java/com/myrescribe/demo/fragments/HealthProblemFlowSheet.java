@@ -1,7 +1,5 @@
 package com.myrescribe.demo.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,7 +12,7 @@ import com.myrescribe.demo.R;
 
 public class HealthProblemFlowSheet extends Fragment {
 
-   Spinner mHistorySpinner;
+    Spinner mHistorySpinner;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
