@@ -51,6 +51,7 @@
                         android:id="@+id/smokingOptionNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/no" />
 
@@ -138,9 +139,10 @@
 
                     <RadioButton
                         android:id="@+id/haveYouQuitSmokingNo"
-
                         android:layout_width="wrap_content"
+
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/no" />
 
@@ -225,9 +227,10 @@
 
                     <RadioButton
                         android:id="@+id/alcoholNo"
-
                         android:layout_width="wrap_content"
+
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/no" />
 
@@ -253,16 +256,18 @@
                     <RadioButton
                         android:id="@+id/alcoholSessionFrequently"
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/frequently" />
 
                     <RadioButton
                         android:id="@+id/alcoholSessionEveryday"
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/everyday" />
 
@@ -313,6 +318,7 @@
                         android:id="@+id/doYouDrinkLayoutTea"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
 
                         android:text="@string/tea" />
@@ -321,6 +327,7 @@
                         android:id="@+id/doYouDrinkLayoutCola"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
 
                         android:text="@string/cola" />
