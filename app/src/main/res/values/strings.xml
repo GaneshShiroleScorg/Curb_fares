@@ -29,7 +29,8 @@
     <string name="stents">Stents</string>
     <string name="pacemaker">Pacemaker</string>
     <string name="defibrillator">Defibrillator</string>
-    <string name="allergies">Type Here</string>
+    <string name="type_here">Type Here</string>
+    <string name="allergies">ALLERGIES</string>
 
     <string-array name="relationship_array">
         <item>Son</item>
@@ -38,10 +39,21 @@
         <item>Wife</item>
         <item>Others</item>
     </string-array>
+
+    <string-array name="history_array">
+        <item>Select</item>
+        <item>Last Stress Test</item>
+        <item>Last Echo</item>
+        <item>Last Carotid USG</item>
+        <item>Last Cardiac Cath</item>
+    </string-array>
+
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="enter">Enter</string>
     <string name="enter_mobile_number">Enter mobile no</string>
     <string name="enter_email_id">Enter Email ID</string>
     <string name="or">OR</string>
     <string name="title_activity_splash">Splash</string>
+    <string name="history_of_cardiac_implantable">HISTORY OF CARDIAC IMPLANTABLE</string>
+    <string name="complaints">COMPLAINTS</string>
 </resources>
