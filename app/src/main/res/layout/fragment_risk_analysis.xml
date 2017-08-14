@@ -57,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
@@ -66,7 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -98,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
@@ -107,7 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -140,7 +140,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
@@ -149,7 +149,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -181,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
@@ -190,7 +190,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -222,7 +222,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
@@ -231,7 +231,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -263,7 +263,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
@@ -272,7 +272,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -305,7 +305,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
@@ -314,7 +314,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:button="@drawable/selector"
+                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 

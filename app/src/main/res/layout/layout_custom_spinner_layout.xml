@@ -24,6 +24,6 @@
         android:maxLines="1"
         android:layout_marginLeft="@dimen/overall_margin"
         android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:textSize="15sp" />
 
 </LinearLayout>

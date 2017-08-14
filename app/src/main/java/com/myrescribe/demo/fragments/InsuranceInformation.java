@@ -1,6 +1,7 @@
 package com.myrescribe.demo.fragments;
 
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -18,14 +20,19 @@ import android.widget.TextView;
 import com.myrescribe.demo.Custom_Spin_Adapter;
 import com.myrescribe.demo.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class InsuranceInformation extends Fragment implements AdapterView.OnItemSelectedListener{
+public class InsuranceInformation extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
     @BindView(R.id.insuredName)
@@ -59,6 +66,8 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
     Unbinder unbinder;
     private String[] mArrayId;
     Custom_Spin_Adapter mCustomSpinAdapterForGroupNo;
+    private SimpleDateFormat dateFormatter;
+    private DatePickerDialog fromDatePickerDialog;
 
     public InsuranceInformation() {
         // Required empty public constructor
@@ -77,6 +86,7 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
     }
 
     private void init() {
+        setDateTimeField();
         mArrayId = getResources().getStringArray(R.array.ids);
         mCustomSpinAdapterForGroupNo = new Custom_Spin_Adapter(getActivity(), mArrayId, getResources().getStringArray(R.array.group_no));
         groupNo.setAdapter(mCustomSpinAdapterForGroupNo);
@@ -93,8 +103,8 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(insuredName.getText().length()!=0&&policyId.getText().length()!=0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_group)))
-               subscriberInfo.setVisibility(View.VISIBLE);
+                if (insuredName.getText().length() != 0 && policyId.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_group)))
+                    subscriberInfo.setVisibility(View.VISIBLE);
             }
         });
         insuredName.addTextChangedListener(new TextWatcher() {
@@ -110,7 +120,7 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(insuredName.getText().length()!=0&&policyId.getText().length()!=0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_group)))
+                if (insuredName.getText().length() != 0 && policyId.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_group)))
                     subscriberInfo.setVisibility(View.VISIBLE);
             }
         });
@@ -128,7 +138,7 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(subscriberName.getText().length()!=0&&insuredSsNo.getText().length()!=0&&birthDate.getText().length()!=0)
+                if (subscriberName.getText().length() != 0 && insuredSsNo.getText().length() != 0 && birthDate.getText().length() != 0)
                     relationship.setVisibility(View.VISIBLE);
             }
         });
@@ -145,7 +155,7 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(subscriberName.getText().length()!=0&&insuredSsNo.getText().length()!=0&&birthDate.getText().length()!=0)
+                if (subscriberName.getText().length() != 0 && insuredSsNo.getText().length() != 0 && birthDate.getText().length() != 0)
                     relationship.setVisibility(View.VISIBLE);
 
             }
@@ -163,7 +173,7 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(subscriberName.getText().length()!=0&&insuredSsNo.getText().length()!=0&&birthDate.getText().length()!=0)
+                if (subscriberName.getText().length() != 0 && insuredSsNo.getText().length() != 0 && birthDate.getText().length() != 0)
                     relationship.setVisibility(View.VISIBLE);
 
             }
@@ -176,6 +186,7 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
         super.onDestroyView();
         unbinder.unbind();
     }
+
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // saveEnteredData();
@@ -187,7 +198,7 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
             int indexSselectedId = parent.getSelectedItemPosition();
             mArrayId = getResources().getStringArray(R.array.group_no);
             mSelectedId = mArrayId[indexSselectedId];
-            if(insuredName.getText().length()!=0&&policyId.getText().length()!=0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_group)))
+            if (insuredName.getText().length() != 0 && policyId.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_group)))
                 subscriberInfo.setVisibility(View.VISIBLE);
 
         }
@@ -196,5 +207,28 @@ public class InsuranceInformation extends Fragment implements AdapterView.OnItem
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @OnClick(R.id.birthDate)
+    public void onViewClicked() {
+        fromDatePickerDialog.show();
+    }
+
+    private void setDateTimeField() {
+
+        birthDate.setFocusable(false);
+        dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
+
+        Calendar newCalendar = Calendar.getInstance();
+
+        fromDatePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                birthDate.setText(dateFormatter.format(newDate.getTime()));
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
     }
 }

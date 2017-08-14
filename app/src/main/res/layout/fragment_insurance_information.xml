@@ -141,7 +141,7 @@
                 android:padding="@dimen/overall_margin"
                 android:text="@string/patient_relation_ship" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -191,7 +191,7 @@
                     android:maxLines="1"
                     android:layout_marginRight="@dimen/spacing" />
 
-            </LinearLayout>
+            </RadioGroup>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

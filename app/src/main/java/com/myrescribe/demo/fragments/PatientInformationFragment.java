@@ -1,28 +1,33 @@
 package com.myrescribe.demo.fragments;
 
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatSpinner;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.myrescribe.demo.Custom_Spin_Adapter;
 import com.myrescribe.demo.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
-public class PatientInformationFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class PatientInformationFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     @BindView(R.id.lastName)
     EditText lastName;
@@ -73,6 +78,8 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
     Custom_Spin_Adapter mCustomSpinAdapterForGender;
     Custom_Spin_Adapter mCustomSpinAdapterForMaritalStatus;
+    private DatePickerDialog fromDatePickerDialog;
+    private SimpleDateFormat dateFormatter;
 
     public PatientInformationFragment() {
         // Required empty public constructor
@@ -94,6 +101,7 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
     }
 
     private void init() {
+        setDateTimeField();
         mArrayId = getResources().getStringArray(R.array.ids);
         mCustomSpinAdapterForMaritalStatus = new Custom_Spin_Adapter(getActivity(), mArrayId, getResources().getStringArray(R.array.marital_status));
         martialStatus.setAdapter(mCustomSpinAdapterForMaritalStatus);
@@ -113,7 +121,7 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (dob.getText().length() != 0  && address1.getText().length() != 0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) &&!mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status))&& address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
+                if (dob.getText().length() != 0 && address1.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) && !mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status)) && address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
                     otherDetails.setVisibility(View.VISIBLE);
                 }
             }
@@ -131,7 +139,7 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (dob.getText().length() != 0  && address1.getText().length() != 0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) &&!mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status))&& address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
+                if (dob.getText().length() != 0 && address1.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) && !mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status)) && address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
                     otherDetails.setVisibility(View.VISIBLE);
                 }
             }
@@ -149,7 +157,7 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (dob.getText().length() != 0  && address1.getText().length() != 0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) &&!mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status))&& address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
+                if (dob.getText().length() != 0 && address1.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) && !mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status)) && address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
                     otherDetails.setVisibility(View.VISIBLE);
                 }
             }
@@ -167,7 +175,7 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (dob.getText().length() != 0  && address1.getText().length() != 0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) &&!mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status))&& address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
+                if (dob.getText().length() != 0 && address1.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) && !mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status)) && address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
                     otherDetails.setVisibility(View.VISIBLE);
                 }
             }
@@ -185,7 +193,7 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (dob.getText().length() != 0  && address1.getText().length() != 0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) &&!mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status))&& address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
+                if (dob.getText().length() != 0 && address1.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) && !mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status)) && address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
                     otherDetails.setVisibility(View.VISIBLE);
                 }
             }
@@ -203,7 +211,7 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (dob.getText().length() != 0  && address1.getText().length() != 0&&!mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) &&!mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status))&& address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
+                if (dob.getText().length() != 0 && address1.getText().length() != 0 && !mSelectedId.equalsIgnoreCase(getString(R.string.select_gender)) && !mSelectedMaritalStatus.equalsIgnoreCase(getString(R.string.select_marital_status)) && address2.getText().length() != 0 && city.getText().length() != 0 && state.getText().length() != 0 && zipCode.getText().length() != 0) {
                     otherDetails.setVisibility(View.VISIBLE);
                 }
             }
@@ -279,8 +287,8 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(phoneNoUser.getText().length()==10)
-                userPatientInfo.setVisibility(View.VISIBLE);
+                if (phoneNoUser.getText().length() == 10)
+                    userPatientInfo.setVisibility(View.VISIBLE);
             }
         });
         emailid.addTextChangedListener(new TextWatcher() {
@@ -296,8 +304,8 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(emailid.getText().toString().contains("@"))
-                userPatientInfo.setVisibility(View.VISIBLE);
+                if (emailid.getText().toString().contains("@"))
+                    userPatientInfo.setVisibility(View.VISIBLE);
             }
         });
 
@@ -313,11 +321,6 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-    }
-
-    @Override
-    public void onClick(View v) {
-
     }
 
     @Override
@@ -338,5 +341,30 @@ public class PatientInformationFragment extends Fragment implements View.OnClick
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @OnClick(R.id.dob)
+    public void onViewClicked() {
+        fromDatePickerDialog.show();
+    }
+
+/////////////////////////////////////////////////////
+
+    private void setDateTimeField() {
+
+        dob.setFocusable(false);
+        dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
+
+        Calendar newCalendar = Calendar.getInstance();
+
+        fromDatePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                dob.setText(dateFormatter.format(newDate.getTime()));
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
     }
 }

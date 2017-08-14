@@ -43,7 +43,7 @@
                         android:id="@+id/smokingOptionYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/yes" />
 
                     <RadioButton android:padding="@dimen/dp3"
@@ -51,7 +51,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp6"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/no" />
 
                 </RadioGroup>
@@ -133,7 +133,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/yes" />
 
                     <RadioButton android:padding="@dimen/dp3"
@@ -142,7 +142,7 @@
 
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp6"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/no" />
 
                 </RadioGroup>
@@ -221,7 +221,7 @@
                         android:id="@+id/alcoholYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/yes" />
 
                     <RadioButton android:padding="@dimen/dp3"
@@ -230,7 +230,7 @@
 
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp6"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/no" />
 
                 </RadioGroup>
@@ -248,7 +248,7 @@
                         android:id="@+id/alcoholSessionOccasionally"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:button="@drawable/selector"
+                        
 
                         android:text="@string/occasionally" />
 
@@ -258,7 +258,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="@dimen/dp6"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/frequently" />
 
                     <RadioButton android:padding="@dimen/dp3"
@@ -267,7 +267,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="@dimen/dp6"
-                        android:button="@drawable/selector"
+                        
                         android:text="@string/everyday" />
 
                 </RadioGroup>
@@ -309,7 +309,7 @@
                         android:id="@+id/doYouDrinkLayoutCoffee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:button="@drawable/selector"
+                        
 
                         android:text="@string/Coffee" />
 
@@ -318,7 +318,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp6"
-                        android:button="@drawable/selector"
+                        
 
                         android:text="@string/tea" />
 
@@ -327,7 +327,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp6"
-                        android:button="@drawable/selector"
+                        
 
                         android:text="@string/cola" />
 
