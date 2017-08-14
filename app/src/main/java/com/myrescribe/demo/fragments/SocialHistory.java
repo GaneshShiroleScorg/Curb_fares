@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -124,106 +125,32 @@ public class SocialHistory extends Fragment {
         });
     }
 
-    @OnClick({R.id.smokingOptionYes, R.id.smokingOptionNo})
-    public void onSmokingOptionClicked(RadioButton radioButton) {
+    @OnClick({R.id.smokingOptionYes, R.id.smokingOptionNo,
+            R.id.haveYouQuitSmokingYes, R.id.haveYouQuitSmokingNo,
+            R.id.alcoholYes, R.id.alcoholNo,
+            R.id.alcoholSessionEveryday, R.id.alcoholSessionOccasionally, R.id.alcoholSessionFrequently,
+            R.id.doYouDrinkLayoutTea, R.id.doYouDrinkLayoutCoffee, R.id.doYouDrinkLayoutCola
+    })
+    public void onCheckBoxClicked(RadioButton radioButton) {
         boolean checked = radioButton.isChecked();
-        switch (radioButton.getId()) {
-            case R.id.smokingOptionYes:
-                if (checked) {
-                    mSmokingOptionSelected = radioButton.getText().toString();
-                }
-                break;
-            case R.id.smokingOptionNo:
-                if (checked) {
-                    mSmokingOptionSelected = radioButton.getText().toString();
-                }
-                break;
+        if (radioButton.getId() == R.id.smokingOptionYes || radioButton.getId() == R.id.smokingOptionNo) {
+            mSmokingOptionSelected = radioButton.getText().toString();
+        } else if (radioButton.getId() == R.id.haveYouQuitSmokingYes || radioButton.getId() == R.id.haveYouQuitSmokingNo) {
+            mHaveYouQuitOptionSelected = radioButton.getText().toString();
+        } else if (radioButton.getId() == R.id.alcoholYes || radioButton.getId() == R.id.alcoholNo) {
+            mAlcoholOptionSelected = radioButton.getText().toString();
+            if (mAlcoholSessionSelected != null && mAlcoholOptionSelected != null) {
+                mDoYouDrinkLayout.setVisibility(View.VISIBLE);
+            }
+        } else if (radioButton.getId() == R.id.alcoholSessionEveryday || radioButton.getId() == R.id.alcoholSessionOccasionally || radioButton.getId() == R.id.alcoholSessionFrequently) {
+            mAlcoholSessionSelected = radioButton.getText().toString();
+            if (mAlcoholSessionSelected != null && mAlcoholOptionSelected != null) {
+                mDoYouDrinkLayout.setVisibility(View.VISIBLE);
+            }
+        } else if (radioButton.getId() == R.id.doYouDrinkLayoutTea || radioButton.getId() == R.id.doYouDrinkLayoutCoffee || radioButton.getId() == R.id.doYouDrinkLayoutCola) {
+            mDoYouDrinkOptionSelected = radioButton.getText().toString();
         }
+
+        Log.e("DATA", mSmokingOptionSelected + "|" + mHaveYouQuitOptionSelected + "|" + mAlcoholOptionSelected + "|" + mAlcoholSessionSelected + "|" + mDoYouDrinkOptionSelected);
     }
-
-    @OnClick({R.id.haveYouQuitSmokingYes, R.id.haveYouQuitSmokingNo})
-    public void onHaveYouQuitSmokingOptionClicked(RadioButton radioButton) {
-        boolean checked = radioButton.isChecked();
-        switch (radioButton.getId()) {
-            case R.id.haveYouQuitSmokingYes:
-                if (checked) {
-                    mHaveYouQuitOptionSelected = radioButton.getText().toString();
-                }
-                break;
-            case R.id.haveYouQuitSmokingNo:
-                if (checked) {
-                    mHaveYouQuitOptionSelected = radioButton.getText().toString();
-                }
-                break;
-        }
-    }
-
-    @OnClick({R.id.alcoholYes, R.id.alcoholNo})
-    public void onAlcoholOptionClicked(RadioButton radioButton) {
-        boolean checked = radioButton.isChecked();
-        switch (radioButton.getId()) {
-            case R.id.alcoholYes:
-                if (checked) {
-                    mAlcoholOptionSelected = radioButton.getText().toString();
-                }
-                break;
-            case R.id.alcoholNo:
-                if (checked) {
-                    mAlcoholOptionSelected = radioButton.getText().toString();
-                }
-                break;
-        }
-        if (mAlcoholSessionSelected != null && mAlcoholOptionSelected != null) {
-            mDoYouDrinkLayout.setVisibility(View.VISIBLE);
-        }
-    }
-
-    @OnClick({R.id.alcoholSessionEveryday, R.id.alcoholSessionOccasionally, R.id.alcoholSessionFrequently})
-    public void onAlcoholSessionOptionClicked(RadioButton radioButton) {
-        boolean checked = radioButton.isChecked();
-        switch (radioButton.getId()) {
-            case R.id.alcoholSessionEveryday:
-                if (checked) {
-                    mAlcoholSessionSelected = radioButton.getText().toString();
-                }
-                break;
-            case R.id.alcoholSessionOccasionally:
-                if (checked) {
-                    mAlcoholSessionSelected = radioButton.getText().toString();
-                }
-                break;
-            case R.id.alcoholSessionFrequently:
-                if (checked) {
-                    mAlcoholSessionSelected = radioButton.getText().toString();
-                }
-                break;
-        }
-        if (mAlcoholSessionSelected != null && mAlcoholOptionSelected != null) {
-            mDoYouDrinkLayout.setVisibility(View.VISIBLE);
-        }
-    }
-
-
-    @OnClick({R.id.doYouDrinkLayoutTea, R.id.doYouDrinkLayoutCoffee, R.id.doYouDrinkLayoutCola})
-    public void onDoYouDrinkOptionClicked(RadioButton radioButton) {
-        boolean checked = radioButton.isChecked();
-        switch (radioButton.getId()) {
-            case R.id.doYouDrinkLayoutTea:
-                if (checked) {
-                    mDoYouDrinkOptionSelected = radioButton.getText().toString();
-                }
-                break;
-            case R.id.doYouDrinkLayoutCoffee:
-                if (checked) {
-                    mDoYouDrinkOptionSelected = radioButton.getText().toString();
-                }
-                break;
-            case R.id.doYouDrinkLayoutCola:
-                if (checked) {
-                    mDoYouDrinkOptionSelected = radioButton.getText().toString();
-                }
-                break;
-        }
-    }
-
 }
