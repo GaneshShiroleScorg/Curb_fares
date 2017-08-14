@@ -1,5 +1,6 @@
 package com.myrescribe.demo;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -7,7 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
 import com.myrescribe.demo.fragments.HealthProblemFlowSheet;
 import com.myrescribe.demo.fragments.InCaseofEmergency;
@@ -21,7 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private Toolbar toolbar;
+    //    private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -35,7 +37,36 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                View focus = getCurrentFocus();
+                if (focus != null) {
+                    hiddenKeyboard(focus);
+                }
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                View focus = getCurrentFocus();
+                if (focus != null) {
+                    hiddenKeyboard(focus);
+                }
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                View focus = getCurrentFocus();
+                if (focus != null) {
+                    hiddenKeyboard(focus);
+                }
+            }
+        });
+    }
+
+    private void hiddenKeyboard(View v) {
+        InputMethodManager keyboard = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        keyboard.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 
     private void setupViewPager(ViewPager viewPager) {

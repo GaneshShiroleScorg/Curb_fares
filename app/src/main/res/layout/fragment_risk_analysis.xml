@@ -18,6 +18,7 @@
             android:layout_margin="@dimen/dp10">
 
             <TextView
+                android:textSize="@dimen/sp14"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -25,6 +26,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:textSize="@dimen/sp14"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -39,6 +41,7 @@
             android:layout_margin="@dimen/dp10">
 
             <TextView
+                android:textSize="@dimen/sp12"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -53,20 +56,20 @@
                 android:orientation="vertical">
 
                 <RadioButton
+                    android:textSize="@dimen/sp12"
                     android:id="@+id/quesOneOptionYes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
                 <RadioButton
+                    android:textSize="@dimen/sp12"
                     android:id="@+id/quesOneOptionNo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -80,6 +83,7 @@
             android:layout_margin="@dimen/dp10">
 
             <TextView
+                android:textSize="@dimen/sp12"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -98,16 +102,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
+                    android:textSize="@dimen/sp12"
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
                 <RadioButton
                     android:id="@+id/quesTwoOptionNo"
+                    android:textSize="@dimen/sp12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -121,6 +125,7 @@
             android:layout_margin="@dimen/dp10">
 
             <TextView
+                android:textSize="@dimen/sp12"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -140,16 +145,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
+                    android:textSize="@dimen/sp12"
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
                 <RadioButton
+                    android:textSize="@dimen/sp12"
                     android:id="@+id/quesThreeOptionNo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -166,6 +171,7 @@
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="@dimen/sp12"
                 android:gravity="center_vertical"
                 android:text="@string/ques_four" />
 
@@ -177,20 +183,20 @@
                 android:orientation="vertical">
 
                 <RadioButton
+                    android:textSize="@dimen/sp12"
                     android:id="@+id/quesFourOptionYes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
                 <RadioButton
+                    android:textSize="@dimen/sp12"
                     android:id="@+id/quesFourOptionNo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -204,6 +210,8 @@
             android:layout_margin="@dimen/dp10">
 
             <TextView
+                android:textSize="@dimen/sp12"
+
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -222,16 +230,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
+                    android:textSize="@dimen/sp12"
                     android:text="@string/yes" />
 
+
                 <RadioButton
+                    android:textSize="@dimen/sp12"
                     android:id="@+id/quesFiveOptionNo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -248,6 +257,7 @@
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="@dimen/sp12"
                 android:gravity="center_vertical"
                 android:text="@string/ques_six" />
 
@@ -263,16 +273,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
+                    android:textSize="@dimen/sp12"
                     android:padding="@dimen/dp3"
                     android:text="@string/yes" />
 
                 <RadioButton
                     android:id="@+id/quesSixOptionNo"
+                    android:textSize="@dimen/sp12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 
@@ -289,6 +299,7 @@
                 android:layout_width="@dimen/dp0"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="@dimen/sp12"
                 android:gravity="center_vertical"
                 android:text="@string/ques_seven" />
 
@@ -305,16 +316,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
+                    android:textSize="@dimen/sp12"
                     android:text="@string/yes" />
 
                 <RadioButton
+                    android:textSize="@dimen/sp12"
                     android:id="@+id/quesSevenOptionNo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    
                     android:padding="@dimen/dp3"
                     android:text="@string/no" />
 

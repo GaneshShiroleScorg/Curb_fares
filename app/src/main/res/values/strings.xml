@@ -81,13 +81,13 @@
     <string name="answer">Answer</string>
 
 
-    <string name="patientName">Patient’s name</string>
+    <string name="patientName">PATIENT’S NAME</string>
     <string name="line1">Line 1</string>
     <string name="line2">Line 2</string>
     <string name="city">City</string>
     <string name="state">State</string>
     <string name="zip_code">ZIP Code</string>
-    <string name="address">Address</string>
+    <string name="address">ADDRESS</string>
     <string name="social_security_no">Social Security No</string>
     <string name="phone_no">Phone No</string>
     <string name="occupation">Occupation</string>
@@ -102,7 +102,7 @@
     <string name="spouse">Spouse</string>
     <string name="child">Child</string>
     <string name="other">Other</string>
-    <string name="loginInfo">Login Information</string>
+    <string name="loginInfo">LOGIN INFORMATION</string>
     <string name="select_marital_status">Select Marital Status</string>
     <string name="select_gender">Select Gender</string>
     <string name="select_group">Select Group No</string>

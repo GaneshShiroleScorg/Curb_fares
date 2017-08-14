@@ -300,7 +300,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:hint="@string/zip_code"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:maxLines="1" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
