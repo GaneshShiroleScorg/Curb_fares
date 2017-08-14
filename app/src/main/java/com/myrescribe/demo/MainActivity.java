@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.myrescribe.demo.fragments.PatientInformationFragment;
+import com.myrescribe.demo.fragments.RiskAnalysis;
+import com.myrescribe.demo.fragments.SocialHistory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new PatientInformationFragment(), "Insurance Information");
         adapter.addFragment(new PatientInformationFragment(), "In Case of Emergency");
         adapter.addFragment(new PatientInformationFragment(), "Health Problem Flow Sheet");
-        adapter.addFragment(new PatientInformationFragment(), "Social History");
-        adapter.addFragment(new PatientInformationFragment(), "Risk Analysis");
+        adapter.addFragment(new SocialHistory(), "Social History");
+        adapter.addFragment(new RiskAnalysis(), "Risk Analysis");
 
         viewPager.setAdapter(adapter);
     }
