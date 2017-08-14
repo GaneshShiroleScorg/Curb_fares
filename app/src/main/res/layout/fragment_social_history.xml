@@ -3,13 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:padding="@dimen/common_padding"
     tools:context="com.myrescribe.demo.fragments.SocialHistory">
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp10"
         android:orientation="vertical">
 
         <LinearLayout
@@ -40,23 +39,25 @@
                     android:gravity="center|left"
                     android:orientation="horizontal">
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/smokingOptionYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:button="@drawable/selector"
                         android:text="@string/yes" />
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/smokingOptionNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/no" />
 
                 </RadioGroup>
 
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/smokingPackPerDayTextInputLayout"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -75,6 +76,8 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/smokingHowManyYearsTextInputLayout"
+
                     android:layout_width="@dimen/dp0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -125,7 +128,7 @@
                     android:gravity="center|left"
                     android:orientation="horizontal">
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/haveYouQuitSmokingYes"
 
                         android:layout_width="wrap_content"
@@ -133,17 +136,19 @@
                         android:button="@drawable/selector"
                         android:text="@string/yes" />
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/haveYouQuitSmokingNo"
-
                         android:layout_width="wrap_content"
+
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/no" />
 
                 </RadioGroup>
 
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/haveYouQuitSmoking_HowManyYearsTextInputLayout"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -188,6 +193,7 @@
                     android:textAllCaps="true" />
 
                 <TextView
+                    android:id="@+id/alcoholOptionIfYesView"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -211,19 +217,19 @@
                     android:orientation="horizontal"
                     android:weightSum="1">
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/alcoholYes"
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:button="@drawable/selector"
                         android:text="@string/yes" />
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/alcoholNo"
-
                         android:layout_width="wrap_content"
+
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/no" />
 
@@ -238,7 +244,7 @@
                     android:orientation="horizontal"
                     android:weightSum="1">
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/alcoholSessionOccasionally"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -246,19 +252,21 @@
 
                         android:text="@string/occasionally" />
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/alcoholSessionFrequently"
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/frequently" />
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/alcoholSessionEveryday"
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
                         android:text="@string/everyday" />
 
@@ -297,7 +305,7 @@
                     android:gravity="center|left"
                     android:orientation="horizontal">
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/doYouDrinkLayoutCoffee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -305,18 +313,20 @@
 
                         android:text="@string/Coffee" />
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/doYouDrinkLayoutTea"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
 
                         android:text="@string/tea" />
 
-                    <RadioButton
+                    <RadioButton android:padding="@dimen/dp3"
                         android:id="@+id/doYouDrinkLayoutCola"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp6"
                         android:button="@drawable/selector"
 
                         android:text="@string/cola" />
@@ -324,6 +334,7 @@
                 </RadioGroup>
 
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/doYouDrinkLayout_HowMuchPerDayTextInputLayout"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

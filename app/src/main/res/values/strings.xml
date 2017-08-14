@@ -80,4 +80,82 @@
     <string name="questions">Questions</string>
     <string name="answer">Answer</string>
 
+
+    <string name="patientName">Patient’s name</string>
+    <string name="line1">Line 1</string>
+    <string name="line2">Line 2</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="address">Address</string>
+    <string name="social_security_no">Social Security No</string>
+    <string name="phone_no">Phone No</string>
+    <string name="occupation">Occupation</string>
+    <string name="insured_name">Insured\'s Name</string>
+    <string name="group_no">Group No</string>
+    <string name="policyId">Policy Id</string>
+    <string name="subscriber_name">Subscriber\'s Name</string>
+    <string name="insured_ssNo">Insured\'s S S No.</string>
+    <string name="birthdate">Birth Date</string>
+    <string name="patient_relation_ship">Patient’s relationship to subscriber</string>
+    <string name="self">Self</string>
+    <string name="spouse">Spouse</string>
+    <string name="child">Child</string>
+    <string name="other">Other</string>
+    <string name="loginInfo">Login Information</string>
+    <string name="select_marital_status">Select Marital Status</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="select_group">Select Group No</string>
+    <string name="submit">Submit</string>
+    <string-array name="ids">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="marital_status">
+        <item>Select Marital Status</item>
+        <item>Single</item>
+        <item>Married</item>
+        <item>Div</item>
+        <item>Sep</item>
+        <item>Wid</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Trans-gender</item>
+    </string-array>
+    <string-array name="group_no">
+        <item>Select Group No</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
 </resources>
