@@ -4,4 +4,44 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="personname">Person Name</string>
+    <string name="nameofperson">NAME OF PERSON</string>
+    <string name="relationship">RELATIONSHIP</string>
+    <string name="phoneno">PHONE NO</string>
+    <string name="alternate_no">ALTERNATE NO</string>
+    <string name="phonehint">(999) 999-9999</string>
+    <string name="chest_pain">Chest Pain</string>
+    <string name="shortness_of_breath">Shortness of Breath</string>
+    <string name="palpitations">Palpitations</string>
+    <string name="dizziness">Dizziness</string>
+    <string name="passing_out">Passing Out</string>
+    <string name="sweating">Sweating</string>
+    <string name="positive_stress_test">Positive Stress Test</string>
+    <string name="rapid_heart_rate">Rapid Heart Rate</string>
+    <string name="others">Others</string>
+    <string name="surgery_history">SURGERY HISTORY</string>
+    <string name="year">Year</string>
+    <string name="operation">Operation</string>
+    <string name="complications">Complications</string>
+    <string name="history_of_cardiac_tests">HISTORY OF CARDIAC TESTS</string>
+    <string name="outcome">Outcome</string>
+    <string name="location">Location</string>
+    <string name="stents">Stents</string>
+    <string name="pacemaker">Pacemaker</string>
+    <string name="defibrillator">Defibrillator</string>
+    <string name="allergies">Type Here</string>
+
+    <string-array name="relationship_array">
+        <item>Son</item>
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Wife</item>
+        <item>Others</item>
+    </string-array>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="enter">Enter</string>
+    <string name="enter_mobile_number">Enter mobile no</string>
+    <string name="enter_email_id">Enter Email ID</string>
+    <string name="or">OR</string>
+    <string name="title_activity_splash">Splash</string>
 </resources>

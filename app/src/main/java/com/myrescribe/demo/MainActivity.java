@@ -9,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.myrescribe.demo.fragments.HealthProblemFlowSheet;
+import com.myrescribe.demo.fragments.InCaseofEmergency;
 import com.myrescribe.demo.fragments.PatientInformationFragment;
 
 import java.util.ArrayList;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -42,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new PatientInformationFragment(), "Patient Information");
         adapter.addFragment(new PatientInformationFragment(), "Insurance Information");
-        adapter.addFragment(new PatientInformationFragment(), "In Case of Emergency");
-        adapter.addFragment(new PatientInformationFragment(), "Health Problem Flow Sheet");
+        adapter.addFragment(new InCaseofEmergency(), "In Case of Emergency");
+        adapter.addFragment(new HealthProblemFlowSheet(), "Health Problem Flow Sheet");
         adapter.addFragment(new PatientInformationFragment(), "Social History");
         adapter.addFragment(new PatientInformationFragment(), "Risk Analysis");
 
