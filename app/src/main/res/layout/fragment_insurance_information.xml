@@ -31,7 +31,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:hint="@string/insured_name"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
@@ -39,10 +40,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:hint="@string/group_no"
                 android:layout_marginEnd="@dimen/spacing"
                 android:layout_marginStart="@dimen/spacing"
+                android:layout_weight="1"
+                android:hint="@string/group_no"
                 android:maxLines="1"
                 android:paddingLeft="@dimen/overall_margin" />
 
@@ -55,11 +56,13 @@
                 <EditText
                     android:id="@+id/policyId"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:hint="@string/policyId"
                     android:maxLines="1"
-                    android:paddingLeft="@dimen/overall_margin" />
+                    android:paddingLeft="@dimen/overall_margin"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
@@ -82,29 +85,33 @@
                 <EditText
                     android:id="@+id/subscriberName"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:hint="@string/subscriber_name"
                     android:inputType="textPersonName"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/spacing"
                 android:layout_marginEnd="@dimen/spacing"
+                android:layout_marginStart="@dimen/spacing"
+                android:layout_weight="1"
                 android:paddingLeft="@dimen/overall_margin">
 
                 <EditText
                     android:id="@+id/insuredSsNo"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:hint="@string/insured_ssNo"
                     android:inputType="text"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -117,11 +124,13 @@
                 <EditText
                     android:id="@+id/birthDate"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:hint="@string/birthdate"
                     android:inputType="text"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp12" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
@@ -159,14 +168,16 @@
 
                 <RadioButton
                     android:id="@+id/spouse"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="@string/spouse"
                     android:layout_marginEnd="@dimen/spacing"
                     android:layout_marginStart="@dimen/spacing"
+                    android:hint="@string/spouse"
+                    android:maxLines="1"
                     android:padding="@dimen/dp3"
-                    android:maxLines="1" />
+                    android:textSize="@dimen/sp12" />
 
 
                 <RadioButton
@@ -175,21 +186,25 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="@dimen/spacing"
-                    android:padding="@dimen/dp3"
+                    android:layout_marginRight="@dimen/spacing"
                     android:hint="@string/child"
                     android:maxLines="1"
-                    android:layout_marginRight="@dimen/spacing" />
+                    android:padding="@dimen/dp3"
+
+                    android:textSize="@dimen/sp12" />
 
                 <RadioButton
                     android:id="@+id/other"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:padding="@dimen/dp3"
                     android:layout_marginEnd="@dimen/spacing"
+                    android:layout_marginRight="@dimen/spacing"
                     android:hint="@string/other"
                     android:maxLines="1"
-                    android:layout_marginRight="@dimen/spacing" />
+                    android:padding="@dimen/dp3"
+
+                    android:textSize="@dimen/sp12" />
 
             </LinearLayout>
         </LinearLayout>
