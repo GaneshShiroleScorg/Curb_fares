@@ -51,7 +51,7 @@ public class RiskAnalysis extends Fragment {
         // Inflate the layout for this fragment
         View inflate = inflater.inflate(R.layout.fragment_risk_analysis, container, false);
         ButterKnife.bind(this, inflate);
-        initialize();
+        //  initialize();
         return inflate;
     }
 

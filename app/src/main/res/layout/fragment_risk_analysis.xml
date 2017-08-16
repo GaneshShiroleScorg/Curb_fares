@@ -1,336 +1,353 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:padding="@dimen/dp6"
-    android:scrollbars="none"
-    tools:context="com.myrescribe.demo.fragments.RiskAnalysis">
+    android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <View
+        android:layout_width="@dimen/dp0"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_weight="0.3"></View>
+
+    <ScrollView
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:padding="@dimen/dp6"
+        android:scrollbars="none"
+        tools:context="com.myrescribe.demo.fragments.RiskAnalysis">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
+            android:orientation="vertical">
 
-            <TextView
-                android:textSize="@dimen/sp14"
-                android:layout_width="@dimen/dp0"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/questions"
-                android:textStyle="bold" />
+                android:layout_margin="@dimen/dp10">
 
-            <TextView
-                android:textSize="@dimen/sp14"
-                android:layout_width="@dimen/dp0"
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/questions"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:text="@string/answer"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quesOneLayout"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:text="@string/answer"
-                android:textStyle="bold" />
+                android:layout_margin="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/ques_one"
+                    android:textSize="@dimen/sp12" />
+
+                <RadioGroup
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/quesOneOptionYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/sp12" />
+
+                    <RadioButton
+                        android:id="@+id/quesOneOptionNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/no"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quesTwoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/ques_two"
+                    android:textSize="@dimen/sp12" />
+
+                <RadioGroup
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/quesTwoOptionYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/sp12" />
+
+                    <RadioButton
+                        android:id="@+id/quesTwoOptionNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/no"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quesThreeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/ques_three"
+                    android:textSize="@dimen/sp12" />
+
+                <RadioGroup
+
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/quesThreeOptionYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/sp12" />
+
+                    <RadioButton
+                        android:id="@+id/quesThreeOptionNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/no"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quesFourLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/ques_four"
+                    android:textSize="@dimen/sp12" />
+
+                <RadioGroup
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/quesFourOptionYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/sp12" />
+
+                    <RadioButton
+                        android:id="@+id/quesFourOptionNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/no"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quesFiveLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/ques_five"
+                    android:textSize="@dimen/sp12" />
+
+                <RadioGroup
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/quesFiveOptionYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/sp12" />
+
+
+                    <RadioButton
+                        android:id="@+id/quesFiveOptionNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/no"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quesSixLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/ques_six"
+                    android:textSize="@dimen/sp12" />
+
+                <RadioGroup
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/quesSixOptionYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/sp12" />
+
+                    <RadioButton
+                        android:id="@+id/quesSixOptionNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/no"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quesSevenLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/ques_seven"
+                    android:textSize="@dimen/sp12" />
+
+                <RadioGroup
+                    android:id="@+id/smokingOption"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/quesSevenOptionYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/sp12" />
+
+                    <RadioButton
+                        android:id="@+id/quesSevenOptionNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/no"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/quesOneLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
+    </ScrollView>
 
-            <TextView
-                android:textSize="@dimen/sp12"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="@string/ques_one" />
-
-            <RadioGroup
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center|left"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:textSize="@dimen/sp12"
-                    android:id="@+id/quesOneOptionYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/yes" />
-
-                <RadioButton
-                    android:textSize="@dimen/sp12"
-                    android:id="@+id/quesOneOptionNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/no" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/quesTwoLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
-
-            <TextView
-                android:textSize="@dimen/sp12"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="@string/ques_two" />
-
-            <RadioGroup
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center|left"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/quesTwoOptionYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="@dimen/sp12"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/yes" />
-
-                <RadioButton
-                    android:id="@+id/quesTwoOptionNo"
-                    android:textSize="@dimen/sp12"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/no" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/quesThreeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
-
-            <TextView
-                android:textSize="@dimen/sp12"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="@string/ques_three" />
-
-            <RadioGroup
-
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center|left"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/quesThreeOptionYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="@dimen/sp12"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/yes" />
-
-                <RadioButton
-                    android:textSize="@dimen/sp12"
-                    android:id="@+id/quesThreeOptionNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/no" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/quesFourLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
-
-            <TextView
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textSize="@dimen/sp12"
-                android:gravity="center_vertical"
-                android:text="@string/ques_four" />
-
-            <RadioGroup
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center|left"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:textSize="@dimen/sp12"
-                    android:id="@+id/quesFourOptionYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/yes" />
-
-                <RadioButton
-                    android:textSize="@dimen/sp12"
-                    android:id="@+id/quesFourOptionNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/no" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/quesFiveLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
-
-            <TextView
-                android:textSize="@dimen/sp12"
-
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="@string/ques_five" />
-
-            <RadioGroup
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center|left"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/quesFiveOptionYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:textSize="@dimen/sp12"
-                    android:text="@string/yes" />
-
-
-                <RadioButton
-                    android:textSize="@dimen/sp12"
-                    android:id="@+id/quesFiveOptionNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/no" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/quesSixLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
-
-            <TextView
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textSize="@dimen/sp12"
-                android:gravity="center_vertical"
-                android:text="@string/ques_six" />
-
-            <RadioGroup
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center|left"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/quesSixOptionYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="@dimen/sp12"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/yes" />
-
-                <RadioButton
-                    android:id="@+id/quesSixOptionNo"
-                    android:textSize="@dimen/sp12"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/no" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/quesSevenLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp10">
-
-            <TextView
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textSize="@dimen/sp12"
-                android:gravity="center_vertical"
-                android:text="@string/ques_seven" />
-
-            <RadioGroup
-                android:id="@+id/smokingOption"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:gravity="center|left"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/quesSevenOptionYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:textSize="@dimen/sp12"
-                    android:text="@string/yes" />
-
-                <RadioButton
-                    android:textSize="@dimen/sp12"
-                    android:id="@+id/quesSevenOptionNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/no" />
-
-            </RadioGroup>
-        </LinearLayout>
-    </LinearLayout>
-
-</ScrollView>
+    <View
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"></View>
+</LinearLayout>

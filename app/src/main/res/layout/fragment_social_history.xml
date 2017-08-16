@@ -1,378 +1,408 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:padding="@dimen/common_padding"
-    tools:context="com.myrescribe.demo.fragments.SocialHistory">
+    android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <View
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"></View>
+
+    <ScrollView
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:paddingTop="@dimen/common_padding"
+        tools:context="com.myrescribe.demo.fragments.SocialHistory">
 
         <LinearLayout
-            android:id="@+id/smokingLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/smoking"
-                android:textAllCaps="true"
-                android:textSize="@dimen/sp14" />
-
             <LinearLayout
+                android:id="@+id/smokingLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioGroup
-                    android:id="@+id/smokingOption"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center|left"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/smokingOptionYes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/dp3"
-                        android:text="@string/yes"
-                        android:textSize="@dimen/sp12" />
-
-                    <RadioButton
-                        android:id="@+id/smokingOptionNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp6"
-                        android:padding="@dimen/dp3"
-                        android:text="@string/no"
-                        android:textSize="@dimen/sp12" />
-
-                </RadioGroup>
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/smokingPackPerDayTextInputLayout"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-                    <EditText
-                        android:id="@+id/smokingPackPerDay"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/packs_per_day"
-                        android:imeOptions="flagNoExtractUi|actionNext"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textSize="@dimen/sp12" />
-
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/smokingHowManyYearsTextInputLayout"
-
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-                    <EditText
-                        android:id="@+id/smokingHowManyYears"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/how_many_years"
-                        android:imeOptions="flagNoExtractUi|actionDone"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textSize="@dimen/sp12" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/haveYouQuitLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp10"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-
-                android:layout_height="match_parent"
-                android:text="@string/have_you_quit"
-                android:textAllCaps="true"
-                android:textSize="@dimen/sp14" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioGroup
-                    android:id="@+id/haveYouQuitSmokingOption"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center|left"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/haveYouQuitSmokingYes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:padding="@dimen/dp3"
-                        android:text="@string/yes"
-                        android:textSize="@dimen/sp12" />
-
-                    <RadioButton
-                        android:id="@+id/haveYouQuitSmokingNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp6"
-
-                        android:padding="@dimen/dp3"
-                        android:text="@string/no"
-                        android:textSize="@dimen/sp12" />
-
-                </RadioGroup>
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/haveYouQuitSmoking_HowManyYearsTextInputLayout"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-
-                    android:gravity="center">
-
-                    <EditText
-                        android:id="@+id/haveYouQuitSmoking_HowManyYears"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        
-
-                        android:hint="@string/how_many_years"
-                        android:imeOptions="flagNoExtractUi|actionDone"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textSize="@dimen/sp12" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/alcoholLayout"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp10"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="@dimen/dp0"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/alcohol"
-
+                    android:text="@string/smoking"
                     android:textAllCaps="true"
-                    android:textSize="@dimen/sp14" />
+                    android:textSize="@dimen/sp12"/>
 
-                <TextView
-                    android:id="@+id/alcoholOptionIfYesView"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="If yes"
-                    android:textAllCaps="true"
-                    android:textSize="@dimen/sp14" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/smokingOption"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+
+                            android:id="@+id/smokingOptionYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/yes"
+                            android:textSize="@dimen/sp12" />
+
+                        <RadioButton
+                            android:id="@+id/smokingOptionNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/no"
+                            android:textSize="@dimen/sp12" />
+
+                    </RadioGroup>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/smokingPackPerDayTextInputLayout"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/smokingPackPerDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/packs_per_day"
+                            android:imeOptions="flagNoExtractUi|actionNext"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:textSize="@dimen/sp12" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/smokingHowManyYearsTextInputLayout"
+
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/smokingHowManyYears"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/how_many_years"
+                            android:imeOptions="flagNoExtractUi|actionDone"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:textSize="@dimen/sp12" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp40"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioGroup
-                    android:id="@+id/alcoholOption"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center|left"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <RadioButton
-                        android:id="@+id/alcoholYes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:padding="@dimen/dp3"
-                        android:text="@string/yes"
-                        android:textSize="@dimen/sp12" />
-
-                    <RadioButton
-                        android:id="@+id/alcoholNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp6"
-
-                        android:padding="@dimen/dp3"
-                        android:text="@string/no"
-                        android:textSize="@dimen/sp12" />
-
-                </RadioGroup>
-
-                <RadioGroup
-                    android:id="@+id/alcoholSessionOption"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center|left"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <RadioButton
-                        android:id="@+id/alcoholSessionOccasionally"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:padding="@dimen/dp3"
-                        android:text="@string/occasionally"
-                        android:textSize="@dimen/sp12" />
-
-                    <RadioButton
-                        android:id="@+id/alcoholSessionFrequently"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp6"
-
-                        android:padding="@dimen/dp3"
-                        android:text="@string/frequently"
-                        android:textSize="@dimen/sp12" />
-
-                    <RadioButton
-                        android:id="@+id/alcoholSessionEveryday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp6"
-                        android:padding="@dimen/dp3"
-                        android:text="@string/everyday"
-                        android:textSize="@dimen/sp12" />
-
-                </RadioGroup>
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/doYouDrinkLayout"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp10"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/do_you_drink"
-                android:textAllCaps="true"
-                android:textSize="@dimen/sp14" />
-
-            <LinearLayout
+                android:id="@+id/haveYouQuitLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical">
 
-                <RadioGroup
-                    android:id="@+id/doYouDrinkLayoutOption"
-                    android:layout_width="@dimen/dp0"
+                <TextView
+                    android:layout_width="match_parent"
+
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center|left"
+                    android:text="@string/have_you_quit"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/sp12"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/doYouDrinkLayoutCoffee"
+                    <RadioGroup
+                        android:id="@+id/haveYouQuitSmokingOption"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/haveYouQuitSmokingYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/yes"
+                            android:textSize="@dimen/sp12" />
+
+                        <RadioButton
+                            android:id="@+id/haveYouQuitSmokingNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+
+                            android:padding="@dimen/dp3"
+                            android:text="@string/no"
+                            android:textSize="@dimen/sp12" />
+
+                    </RadioGroup>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/haveYouQuitSmoking_HowManyYearsTextInputLayout"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/haveYouQuitSmoking_HowManyYears"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/how_many_years"
+                            android:imeOptions="flagNoExtractUi|actionDone"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:maxLines="1"
+
+                            android:textSize="@dimen/sp12" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <View
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alcoholLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/alcohol"
+
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/sp12"/>
+
+                    <TextView
+                        android:id="@+id/alcoholOptionIfYesView"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/sp14"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/alcoholOption"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/dp3"
-                        android:text="@string/Coffee"
-                        android:textSize="@dimen/sp12" />
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/doYouDrinkLayoutTea"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp6"
-                        android:padding="@dimen/dp3"
-                        android:text="@string/tea"
-                        android:textSize="@dimen/sp12" />
+                        <RadioButton
+                            android:id="@+id/alcoholYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
 
-                    <RadioButton
-                        android:id="@+id/doYouDrinkLayoutCola"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp6"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/yes"
+                            android:textSize="@dimen/sp12" />
 
-                        android:padding="@dimen/dp3"
-                        android:text="@string/cola"
-                        android:textSize="@dimen/sp12" />
+                        <RadioButton
+                            android:id="@+id/alcoholNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
 
-                </RadioGroup>
+                            android:padding="@dimen/dp3"
+                            android:text="@string/no"
+                            android:textSize="@dimen/sp12" />
 
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/doYouDrinkLayout_HowMuchPerDayTextInputLayout"
-                    android:layout_width="@dimen/dp0"
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25" />
+
+                    <RadioGroup
+                        android:id="@+id/alcoholSessionOption"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/alcoholSessionOccasionally"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/occasionally"
+                            android:textSize="@dimen/sp12" />
+
+                        <RadioButton
+                            android:id="@+id/alcoholSessionFrequently"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+
+                            android:padding="@dimen/dp3"
+                            android:text="@string/frequently"
+                            android:textSize="@dimen/sp12" />
+
+                        <RadioButton
+                            android:id="@+id/alcoholSessionEveryday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/everyday"
+                            android:textSize="@dimen/sp12" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doYouDrinkLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:text="@string/do_you_drink"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/sp12"/>
 
-                    android:gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/doYouDrinkLayout_HowMuchPerDay"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        
-                        android:hint="@string/how_much_cups"
-                        android:imeOptions="flagNoExtractUi|actionDone"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textSize="@dimen/sp12" />
+                    <RadioGroup
+                        android:id="@+id/doYouDrinkLayoutOption"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
 
-                </android.support.design.widget.TextInputLayout>
+                        <RadioButton
+                            android:id="@+id/doYouDrinkLayoutCoffee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/Coffee"
+                            android:textSize="@dimen/sp12" />
 
+                        <RadioButton
+                            android:id="@+id/doYouDrinkLayoutTea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/tea"
+                            android:textSize="@dimen/sp12" />
+
+                        <RadioButton
+                            android:id="@+id/doYouDrinkLayoutCola"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+
+                            android:padding="@dimen/dp3"
+                            android:text="@string/cola"
+                            android:textSize="@dimen/sp12" />
+
+                    </RadioGroup>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/doYouDrinkLayout_HowMuchPerDayTextInputLayout"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/doYouDrinkLayout_HowMuchPerDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/how_much_cups"
+
+                            android:imeOptions="flagNoExtractUi|actionDone"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:textSize="@dimen/sp12" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <View
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
+
+    <View
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"></View>
+</LinearLayout>

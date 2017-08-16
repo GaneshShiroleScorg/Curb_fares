@@ -1,136 +1,23 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/common_padding"
-    android:scrollbars="none"
-    tools:context="com.myrescribe.demo.fragments.HealthProblemFlowSheet">
+    android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <View
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"></View>
 
-        <TextView
-            android:textSize="@dimen/sp12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing"
-            android:text="@string/complaints" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/check_comp_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:padding="10dp"
-                android:text="@string/chest_pain" />
-
-            <CheckBox
-                android:id="@+id/check_comp_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
-                android:padding="10dp"
-                android:text="@string/shortness_of_breath" />
-
-            <CheckBox
-                android:id="@+id/check_comp_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
-                android:padding="10dp"
-                android:text="@string/palpitations" />
-
-            <CheckBox
-                android:id="@+id/check_comp_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:padding="10dp"
-                android:text="@string/dizziness" />
-
-        </LinearLayout>
+    <ScrollView
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="@dimen/common_padding"
+        android:scrollbars="none"
+        tools:context="com.myrescribe.demo.fragments.HealthProblemFlowSheet">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <CheckBox
-                android:id="@+id/check_comp_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:padding="10dp"
-                android:text="@string/passing_out" />
-
-            <CheckBox
-                android:id="@+id/check_comp_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
-                android:padding="10dp"
-                android:text="@string/sweating" />
-
-            <CheckBox
-                android:id="@+id/check_comp_7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:padding="10dp"
-                android:text="@string/positive_stress_test" />
-
-            <CheckBox
-                android:id="@+id/check_comp_8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
-                android:padding="10dp"
-                android:text="@string/rapid_heart_rate" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/othersLay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <EditText
-                    android:id="@+id/others"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/others"
-                    android:inputType="textPersonName" />
-            </android.support.design.widget.TextInputLayout>
-
-            <!-- <View
-                 android:layout_width="match_parent"
-                 android:layout_height="1dp"
-                 android:layout_weight="1" />-->
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/secondLay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -139,92 +26,501 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/spacing"
-                android:text="@string/surgery_history" />
+                android:text="@string/complaints"
+                android:textSize="@dimen/sp12" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <CheckBox
+                    android:id="@+id/check_comp_1"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/chest_pain"
+                    android:textSize="@dimen/sp12" />
+
+                <CheckBox
+                    android:id="@+id/check_comp_2"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/shortness_of_breath"
+                    android:textSize="@dimen/sp12" />
+
+                <CheckBox
+                    android:id="@+id/check_comp_3"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/palpitations"
+                    android:textSize="@dimen/sp12" />
+
+                <CheckBox
+                    android:id="@+id/check_comp_4"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/dizziness"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/check_comp_5"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/passing_out"
+                    android:textSize="@dimen/sp12" />
+
+                <CheckBox
+                    android:id="@+id/check_comp_6"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/sweating"
+                    android:textSize="@dimen/sp12" />
+
+                <CheckBox
+                    android:id="@+id/check_comp_7"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/positive_stress_test"
+                    android:textSize="@dimen/sp12" />
+
+                <CheckBox
+                    android:id="@+id/check_comp_8"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/rapid_heart_rate"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/othersLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/others"
+                        android:inputType="textPersonName"
+                        android:maxLength="40"
+                        android:textSize="@dimen/sp12" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- <View
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_weight="1" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing"
+                    android:text="@string/surgery_history"
+                    android:textSize="@dimen/sp12" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:orientation="horizontal">
 
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/yearLay"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/yearLay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/spacing"
+                            android:layout_marginRight="@dimen/spacing"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp12">
+
+                            <EditText
+                                android:id="@+id/year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/year"
+                                android:inputType="number"
+
+                                android:maxLength="4"
+                                android:textSize="@dimen/sp12" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/operationLay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/spacing"
+                            android:layout_marginStart="@dimen/spacing"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp12">
+
+                            <EditText
+                                android:id="@+id/operation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/operation"
+                                android:inputType="textPersonName"
+                                android:maxLength="40"
+                                android:textSize="@dimen/sp12" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/complicationsLay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing"
+                            android:layout_marginStart="@dimen/spacing"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp12">
+
+                            <EditText
+                                android:id="@+id/complications"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/complications"
+                                android:inputType="textPersonName"
+                                android:maxLength="40"
+                                android:textSize="@dimen/sp12" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:paddingBottom="@dimen/dp6">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/add_icon" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:paddingLeft="@dimen/dp6"
+                                android:src="@drawable/delete_icon" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--<View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Next-->
+
+            <LinearLayout
+                android:id="@+id/thirdLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing"
+                    android:text="@string/history_of_cardiac_tests"
+                    android:textSize="@dimen/sp12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/spacing"
-                        android:layout_marginRight="@dimen/spacing"
-                        android:layout_weight="0.5">
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/year"
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:hint="@string/year"
-                            android:inputType="number" />
-                    </android.support.design.widget.TextInputLayout>
+                            android:layout_marginEnd="@dimen/spacing"
+                            android:layout_marginStart="@dimen/spacing"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/historySpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="16dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray" />
+
+                        </LinearLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/outcomeLay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/spacing"
+                            android:layout_marginStart="@dimen/spacing"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp12">
+
+                            <EditText
+                                android:id="@+id/outcome"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/outcome"
+                                android:inputType="textPersonName"
+                                android:maxLength="40"
+                                android:textSize="@dimen/sp12" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/locationLay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing"
+                            android:layout_marginStart="@dimen/spacing"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp12">
+
+                            <EditText
+                                android:id="@+id/location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/location"
+                                android:inputType="textPersonName"
+                                android:maxLength="40"
+                                android:textSize="@dimen/sp12" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center|bottom"
+                            android:paddingBottom="@dimen/dp6">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/add_icon" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:paddingLeft="@dimen/dp6"
+                                android:src="@drawable/delete_icon" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- <View
+                         android:layout_width="0dp"
+                         android:layout_height="1dp"
+                         android:layout_weight="1" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Next-->
+
+            <LinearLayout
+                android:id="@+id/fourthLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing"
+                    android:layout_marginTop="@dimen/spacing"
+                    android:text="@string/history_of_cardiac_implantable"
+                    android:textSize="@dimen/sp12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/check_history_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:text="@string/stents"
+                            android:textSize="@dimen/sp12" />
+
+                        <CheckBox
+                            android:id="@+id/check_history_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:text="@string/pacemaker"
+                            android:textSize="@dimen/sp12" />
+
+                        <CheckBox
+                            android:id="@+id/check_history_3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:text="@string/defibrillator"
+                            android:textSize="@dimen/sp12" />
+
+                    </LinearLayout>
+
+                    <!--<View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+    -->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Next-->
+
+            <LinearLayout
+                android:id="@+id/fifthLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing"
+                    android:text="@string/allergies"
+                    android:textSize="@dimen/sp12" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <android.support.design.widget.TextInputLayout
-                        android:id="@+id/operationLay"
-                        android:layout_width="0dp"
+                        android:id="@+id/allergiesLay"
+
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/spacing"
-                        android:layout_marginStart="@dimen/spacing"
-                        android:layout_weight="1">
+                        android:layout_toLeftOf="@+id/iconLay"
+                        android:layout_toStartOf="@+id/iconLay">
 
                         <EditText
-                            android:id="@+id/operation"
+                            android:id="@+id/allergies"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/operation"
-                            android:inputType="textPersonName" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/complicationsLay"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/spacing"
-                        android:layout_marginStart="@dimen/spacing"
-                        android:layout_weight="1">
-
-                        <EditText
-                            android:id="@+id/complications"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/complications"
-                            android:inputType="textPersonName" />
+                            android:hint="@string/type_here"
+                            android:inputType="textPersonName"
+                            android:maxLength="40"
+                            android:textSize="@dimen/sp12" />
                     </android.support.design.widget.TextInputLayout>
 
                     <LinearLayout
+                        android:id="@+id/iconLay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center">
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center|bottom"
+                        android:paddingBottom="@dimen/dp6">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
                             android:layout_marginLeft="16dp"
                             android:layout_marginStart="16dp"
-                            android:padding="10dp"
                             android:src="@drawable/add_icon" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="10dp"
+                            android:layout_gravity="center|bottom"
+                            android:paddingLeft="@dimen/dp6"
+
                             android:src="@drawable/delete_icon" />
 
                     </LinearLayout>
 
-                </LinearLayout>
+                </RelativeLayout>
 
                 <!--<View
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_weight="1" />-->
 
@@ -232,251 +528,10 @@
 
         </LinearLayout>
 
-        <!--Next-->
+    </ScrollView>
 
-        <LinearLayout
-            android:id="@+id/thirdLay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing"
-                android:text="@string/history_of_cardiac_tests" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/spacing"
-                        android:layout_marginStart="@dimen/spacing"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical">
-
-                        <Spinner
-                            android:id="@+id/historySpinner"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginTop="16dp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/gray" />
-
-                    </LinearLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/outcomeLay"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/spacing"
-                        android:layout_marginStart="@dimen/spacing"
-                        android:layout_weight="1">
-
-                        <EditText
-                            android:id="@+id/outcome"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/outcome"
-                            android:inputType="textPersonName" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/locationLay"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/spacing"
-                        android:layout_marginStart="@dimen/spacing"
-                        android:layout_weight="1">
-
-                        <EditText
-                            android:id="@+id/location"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/location"
-                            android:inputType="textPersonName" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginStart="16dp"
-                            android:padding="10dp"
-                            android:src="@drawable/add_icon" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="10dp"
-                            android:src="@drawable/delete_icon" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <!-- <View
-                     android:layout_width="0dp"
-                     android:layout_height="1dp"
-                     android:layout_weight="1" />-->
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!--Next-->
-
-        <LinearLayout
-            android:id="@+id/fourthLay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing"
-                android:layout_marginTop="@dimen/spacing"
-                android:text="@string/history_of_cardiac_implantable" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <CheckBox
-                        android:id="@+id/check_history_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:text="@string/stents" />
-
-                    <CheckBox
-                        android:id="@+id/check_history_2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:text="@string/pacemaker" />
-
-                    <CheckBox
-                        android:id="@+id/check_history_3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:text="@string/defibrillator" />
-
-                </LinearLayout>
-
-                <!--<View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1" />
--->
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!--Next-->
-
-        <LinearLayout
-            android:id="@+id/fifthLay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing"
-                android:text="@string/allergies" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/allergiesLay"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/iconLay"
-                    android:layout_toStartOf="@+id/iconLay">
-
-                    <EditText
-                        android:id="@+id/allergies"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/type_here"
-                        android:inputType="textPersonName" />
-                </android.support.design.widget.TextInputLayout>
-
-                <LinearLayout
-                    android:id="@+id/iconLay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginStart="16dp"
-                        android:padding="10dp"
-                        android:src="@drawable/add_icon" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:src="@drawable/delete_icon" />
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <!--<View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_weight="1" />-->
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+    <View
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"></View>
+</LinearLayout>

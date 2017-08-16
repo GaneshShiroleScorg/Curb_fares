@@ -30,6 +30,7 @@
     <string name="allergies">ALLERGIES</string>
 
     <string-array name="relationship_array">
+        <item>Select relationship</item>
         <item>Son</item>
         <item>Mother</item>
         <item>Father</item>
@@ -69,7 +70,7 @@
     <string name="Coffee">Coffee</string>
     <string name="tea">Tea</string>
     <string name="cola">Cola</string>
-    <string name="how_much_cups">How much cups/day</string>
+    <string name="how_much_cups">How many cups/day</string>
     <string name="ques_one">1. Do you experience any pain in the legs or feet while at rest?</string>
     <string name="ques_two">2. Do you have uncomfortable aching, fatigue, tingling, cramping or pain in your feet, calves, buttocks, hip or thigh during walking / exercise ? </string>
     <string name="ques_three"> 3. If Yes to question 2, does the pain go away when you stop walking / exercising? </string>
@@ -107,6 +108,7 @@
     <string name="select_gender">Select Gender</string>
     <string name="select_group">Select Group No</string>
     <string name="submit">Submit</string>
+    <string name="next">Next</string>
     <string-array name="ids">
         <item>0</item>
         <item>1</item>

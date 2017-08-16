@@ -10,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.myrescribe.demo.fragments.HealthProblemFlowSheet;
 import com.myrescribe.demo.fragments.InCaseofEmergency;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     //    private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Button mSubmitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+        mSubmitButton = (Button) findViewById(R.id.submitButton);
+        mSubmitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = mSubmitButton.getText().toString();
+                if (s.equalsIgnoreCase(getString(R.string.next))) {
+                    int currentItem = viewPager.getCurrentItem();
+                    viewPager.setCurrentItem(currentItem + 1, true);
+                } else if (s.equalsIgnoreCase(getString(R.string.submit))) {
+                    Toast.makeText(MainActivity.this, "Form submitted successfully.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         setupViewPager(viewPager);
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -44,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
                 if (focus != null) {
                     hiddenKeyboard(focus);
                 }
+                int position = tab.getPosition();
+
+                if (position > 4) {
+                    mSubmitButton.setText(getString(R.string.submit));
+                } else {
+                    mSubmitButton.setText(getString(R.string.next));
+
+                }
+
             }
 
             @Override
@@ -52,6 +77,14 @@ public class MainActivity extends AppCompatActivity {
                 if (focus != null) {
                     hiddenKeyboard(focus);
                 }
+                int position = tab.getPosition();
+
+                if (position > 4) {
+                    mSubmitButton.setText(getString(R.string.submit));
+                } else {
+                    mSubmitButton.setText(getString(R.string.next));
+
+                }
             }
 
             @Override
@@ -59,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
                 View focus = getCurrentFocus();
                 if (focus != null) {
                     hiddenKeyboard(focus);
+                }
+                int position = tab.getPosition();
+                if (position > 4) {
+                    mSubmitButton.setText(getString(R.string.submit));
+                } else {
+                    mSubmitButton.setText(getString(R.string.next));
+
                 }
             }
         });

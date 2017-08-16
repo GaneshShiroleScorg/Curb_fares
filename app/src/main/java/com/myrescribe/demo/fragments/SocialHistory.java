@@ -80,12 +80,12 @@ public class SocialHistory extends Fragment {
         return inflate;
     }
 
-    private void initialize() {
-        mHaveYouQuitLayout.setVisibility(View.GONE);
-        mAlcoholLayout.setVisibility(View.GONE);
-        mDoYouDrinkLayout.setVisibility(View.GONE);
+    private void manageBaseViewVisibility() {
+        mHaveYouQuitLayout.setVisibility(View.VISIBLE);
+        mAlcoholLayout.setVisibility(View.VISIBLE);
+        mDoYouDrinkLayout.setVisibility(View.VISIBLE);
         //----------
-        mAlcoholSessionOption.setVisibility(View.GONE);
+        mAlcoholSessionOption.setVisibility(View.INVISIBLE);
         mAlcoholOptionIfYesView.setVisibility(View.GONE);
         //--------
         mSmokingHowManyYearsTextInputLayout.setVisibility(View.GONE);
@@ -95,6 +95,10 @@ public class SocialHistory extends Fragment {
         //--------
         mDoYouDrinkLayout_HowMuchPerDayTextInputLayout.setVisibility(View.GONE);
 
+    }
+
+    private void initialize() {
+        manageBaseViewVisibility();
         mSmokingHowManyYears.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -187,7 +191,7 @@ public class SocialHistory extends Fragment {
                 mAlcoholOptionIfYesView.setVisibility(View.VISIBLE);
             } else {
                 mDoYouDrinkLayout.setVisibility(View.VISIBLE);
-                mAlcoholSessionOption.setVisibility(View.GONE);
+                mAlcoholSessionOption.setVisibility(View.INVISIBLE);
                 mAlcoholOptionIfYesView.setVisibility(View.GONE);
             }
             //-----

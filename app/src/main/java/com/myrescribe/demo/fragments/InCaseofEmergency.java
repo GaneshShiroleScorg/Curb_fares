@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.myrescribe.demo.Custom_Spin_Adapter;
 import com.myrescribe.demo.R;
 
 /**
@@ -49,13 +50,19 @@ public class InCaseofEmergency extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_in_caseof_emergency, container, false);
         bindViews(rootView);
 
-// Create an ArrayAdapter using the string array and a default spinner layout
+/*// Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.relationship_array, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
-        mRelationshipSpinner.setAdapter(adapter);
+// Apply the adapter to the spinner*/
+
+        String[] mArrayId = getResources().getStringArray(R.array.relationship_array);
+
+        Custom_Spin_Adapter temp = new Custom_Spin_Adapter(getActivity(), mArrayId, mArrayId);
+        mRelationshipSpinner.setAdapter(temp);
+
+        //  mRelationshipSpinner.setAdapter(adapter);
 
         return rootView;
     }

@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import com.myrescribe.demo.Custom_Spin_Adapter;
 import com.myrescribe.demo.R;
 
 import butterknife.BindView;
@@ -105,10 +106,15 @@ public class HealthProblemFlowSheet extends Fragment {
         fourthLay.setVisibility(View.GONE);
         fifthLay.setVisibility(View.GONE);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+        /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.history_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        historySpinner.setAdapter(adapter);
+        historySpinner.setAdapter(adapter);*/
+
+        String[] mArrayId = getResources().getStringArray(R.array.history_array);
+
+        Custom_Spin_Adapter temp = new Custom_Spin_Adapter(getActivity(), mArrayId, mArrayId);
+        historySpinner.setAdapter(temp);
 
         historySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

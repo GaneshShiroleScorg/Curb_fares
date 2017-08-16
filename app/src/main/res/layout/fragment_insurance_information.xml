@@ -1,214 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/overall_margin"
-    android:orientation="vertical"
-    android:windowSoftInputMode="adjustPan">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <View
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"></View>
 
-        <LinearLayout
-            android:id="@+id/insuredInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/overall_margin">
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="@dimen/overall_margin">
-
-                <EditText
-                    android:id="@+id/insuredName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:hint="@string/insured_name"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:textSize="@dimen/sp12" />
-            </android.support.design.widget.TextInputLayout>
-
-            <Spinner
-                android:id="@+id/groupNo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="@dimen/spacing"
-                android:layout_marginStart="@dimen/spacing"
-                android:layout_weight="1"
-                android:hint="@string/group_no"
-                android:maxLines="1"
-                android:paddingLeft="@dimen/overall_margin" />
-
-            <android.support.design.widget.TextInputLayout
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <EditText
-                    android:id="@+id/policyId"
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:hint="@string/policyId"
-                    android:maxLines="1"
-                    android:paddingLeft="@dimen/overall_margin"
-                    android:textSize="@dimen/sp12" />
-
-            </android.support.design.widget.TextInputLayout>
-
-        </LinearLayout>
+    <ScrollView
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/overall_margin"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:windowSoftInputMode="adjustPan">
 
         <LinearLayout
-            android:id="@+id/subscriberInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/overall_margin"
-            android:visibility="gone"
-            tools:visibility="visible">
+            android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="@dimen/overall_margin">
-
-                <EditText
-                    android:id="@+id/subscriberName"
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:hint="@string/subscriber_name"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"
-                    android:textSize="@dimen/sp12" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/spacing"
-                android:layout_marginStart="@dimen/spacing"
-                android:layout_weight="1"
-                android:paddingLeft="@dimen/overall_margin">
-
-                <EditText
-                    android:id="@+id/insuredSsNo"
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:hint="@string/insured_ssNo"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:textSize="@dimen/sp12" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="@dimen/overall_margin">
-
-                <EditText
-                    android:id="@+id/birthDate"
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:hint="@string/birthdate"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:textSize="@dimen/sp12" />
-            </android.support.design.widget.TextInputLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/relationship"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone"
-            tools:visibility="visible">
-
-            <TextView
-                android:id="@+id/patientRelationShip"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="@dimen/overall_margin"
-                android:text="@string/patient_relation_ship" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/insuredInfo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/overall_margin">
 
-                <RadioButton
-                    android:id="@+id/self"
-                    android:layout_width="match_parent"
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:maxLines="1"
-                    android:padding="@dimen/dp3"
-                    android:text="@string/self" />
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/overall_margin">
 
+                    <EditText
+                        android:id="@+id/insuredName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="@string/insured_name"
+                        android:inputType="text"
+                        android:maxLength="40"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
+                </android.support.design.widget.TextInputLayout>
 
-                <RadioButton
-                    android:id="@+id/spouse"
-
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/overall_margin">
+
+                    <Spinner
+                        android:id="@+id/groupNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="13dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+                <!-- <Spinner
+                     android:id="@+id/groupNo"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:layout_marginEnd="@dimen/spacing"
+                     android:layout_marginStart="@dimen/spacing"
+                     android:layout_weight="1"
+                     android:hint="@string/group_no"
+                     android:maxLines="1"
+                     android:paddingLeft="@dimen/overall_margin" />-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/overall_margin">
+
+                    <EditText
+                        android:id="@+id/policyId"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="@string/policyId"
+                        android:maxLines="1"
+
+                        android:textSize="@dimen/sp12" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subscriberInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/overall_margin"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/overall_margin">
+
+                    <EditText
+                        android:id="@+id/subscriberName"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="@string/subscriber_name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/spacing"
                     android:layout_marginStart="@dimen/spacing"
-                    android:hint="@string/spouse"
-                    android:maxLines="1"
-                    android:padding="@dimen/dp3"
-                    android:textSize="@dimen/sp12" />
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/overall_margin">
 
+                    <EditText
+                        android:id="@+id/insuredSsNo"
+                        android:layout_width="match_parent"
 
-                <RadioButton
-                    android:id="@+id/child"
-                    android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="@string/insured_ssNo"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="@dimen/spacing"
-                    android:layout_marginRight="@dimen/spacing"
-                    android:hint="@string/child"
-                    android:maxLines="1"
-                    android:padding="@dimen/dp3"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/overall_margin">
 
-                    android:textSize="@dimen/sp12" />
+                    <EditText
+                        android:id="@+id/birthDate"
+                        android:layout_width="match_parent"
 
-                <RadioButton
-                    android:id="@+id/other"
-                    android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="@string/birthdate"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp12" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/relationship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/overall_margin"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/patientRelationShip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/overall_margin"
+                    android:text="@string/patient_relation_ship" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="@dimen/spacing"
-                    android:layout_marginRight="@dimen/spacing"
-                    android:hint="@string/other"
-                    android:maxLines="1"
-                    android:padding="@dimen/dp3"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/overall_margin">
 
-                    android:textSize="@dimen/sp12" />
+                    <RadioButton
+                        android:id="@+id/self"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp3"
+                        android:text="@string/self"
+                        android:textSize="@dimen/sp12" />
 
-            </RadioGroup>
+
+                    <RadioButton
+                        android:id="@+id/spouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/spacing"
+                        android:layout_marginStart="@dimen/spacing"
+                        android:hint="@string/spouse"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp3"
+                        android:textSize="@dimen/sp12" />
+
+
+                    <RadioButton
+                        android:id="@+id/child"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/spacing"
+                        android:layout_marginRight="@dimen/spacing"
+                        android:hint="@string/child"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp3"
+                        android:textSize="@dimen/sp12" />
+
+                    <RadioButton
+                        android:id="@+id/other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/spacing"
+                        android:layout_marginRight="@dimen/spacing"
+                        android:hint="@string/other"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp3"
+                        android:textSize="@dimen/sp12" />
+
+                </RadioGroup>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+
+    <View
+        android:layout_width="@dimen/dp0"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"></View>
+
+</LinearLayout>
