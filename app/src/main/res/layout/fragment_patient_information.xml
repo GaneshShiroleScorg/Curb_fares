@@ -62,8 +62,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp0"
-                    android:layout_weight="1"
-                    android:paddingLeft="@dimen/overall_margin">
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/emailid"
